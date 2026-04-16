@@ -15,7 +15,6 @@ def nothing(x): pass
 cap = cv2.VideoCapture(0)
 cv2.namedWindow("Processamento")
 
-# 3. Criando Trackbars
 cv2.createTrackbar("Baixa-Passa 1 (Blur)", "Processamento", 1, 30, nothing)
 cv2.createTrackbar("Baixa-Passa 2 (Mediana)", "Processamento", 1, 30, nothing)
 
