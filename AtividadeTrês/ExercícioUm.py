@@ -11,7 +11,8 @@ lower_red = np.array([0, 120, 70])
 upper_red = np.array([10, 255, 255])
 mask_red = cv2.inRange(hsv, lower_red, upper_red)
 
-contours, _ = cv2.findContours(mask_red, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+# contours, _ = cv2.findContours(mask_red, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+contours, _ = cv2.findContours(mask_red, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 if contours:
     c = max(contours, key=cv2.contourArea)
     x, y, w, h = cv2.boundingRect(c)
