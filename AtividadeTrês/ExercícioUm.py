@@ -23,10 +23,10 @@ if contours:
 
     _, thresh = cv2.threshold(blurred, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
-    kernel = np.ones((5, 5), np.uint8) # foi o melhor que eu consegui, contou 3 galinhas das 4
+    kernel = np.ones((5, 5), np.uint8)
     eroded = cv2.erode(thresh, kernel, iterations=4)
 
-    galinhas_contours, _ = cv2.findContours(eroded, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    galinhas_contours, _ = cv2.findContours(eroded, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
     print(f"Número de galinhas no retângulo: {len(galinhas_contours)}")
 
     cv2.imshow("ROI Binarizado e Erodido", eroded)
