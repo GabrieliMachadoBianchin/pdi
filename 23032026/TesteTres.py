@@ -1,6 +1,6 @@
 import cv2 as cv
 
-src = cv.imread("ExTCC.jfif")
+src = cv.imread("../imagens/ExTCC.jfif")
 
 if src is None:
     print("Não abre")

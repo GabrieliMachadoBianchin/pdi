@@ -3,7 +3,7 @@ import sys  # Para tratamento de erros
 
 def main():
     # Caminho da imagem (altere para o caminho da sua imagem)
-    image_path = "ExTCC.jfif"
+    image_path = "../imagens/ExTCC.jfif"
 
     # Tenta carregar a imagem
     image = cv2.imread(image_path)

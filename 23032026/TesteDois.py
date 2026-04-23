@@ -1,7 +1,7 @@
 import cv2 as cv
 import sys
 
-img = cv.imread("ExTCC.jfif")
+img = cv.imread("../imagens/ExTCC.jfif")
 
 if img is None:
     sys.exit("Imagem não encontrada")
